@@ -11,3 +11,7 @@
     --color-accent-default: var(--color-northwestern-purple);
   }
 } */
+
+code {
+  font-weight: 400;
+}
