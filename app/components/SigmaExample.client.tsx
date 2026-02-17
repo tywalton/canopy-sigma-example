@@ -21,27 +21,16 @@ export default function SigmaExample({...rest}) {
       const {default: Sigma} = await import(SIGMA_CDN_URL);
 
       const graph = new Graph();
-      graph.addNode("1", {
-        label: "Node 1",
-        x: 0,
-        y: 0,
-        size: 10,
-        color: "blue",
-      });
-      graph.addNode("2", {
-        label: "Node 2",
-        x: 1,
-        y: 1,
-        size: 20,
-        color: "red",
-      });
-      graph.addEdge("1", "2", {
-        size: 5,
-        color: "purple",
-      });
+      themes.forEach((theme, i) => {
+  graph.addNode(theme.id, {
+    label: theme.label,
+    x: Math.cos((2 * Math.PI * i) / themes.length),
+    y: Math.sin((2 * Math.PI * i) / themes.length),
+    size: theme.count,
+    color: "#4f46e5", // pick a neutral base color
+  });
+});
 
-      renderer = new Sigma(graph, containerRef.current);
-    };
 
     void run();
 
