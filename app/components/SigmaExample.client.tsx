@@ -27,7 +27,7 @@ export default function SigmaExample({...rest}) {
     x: Math.cos((2 * Math.PI * i) / themes.length),
     y: Math.sin((2 * Math.PI * i) / themes.length),
     size: theme.count,
-    color: "#4f46e5", // pick a neutral base color
+    color: "#4f46e5", // 
   });
 });
 
